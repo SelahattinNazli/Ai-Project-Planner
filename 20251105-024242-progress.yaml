@@ -1,0 +1,12 @@
+items:
+  - test_project_structure
+  - test_config_files
+  - test_src_modules
+  - test_imports
+  - test_helper_module
+results:
+  test_project_structure: passed
+  test_config_files: passed
+  test_src_modules: passed
+  test_imports: failed
+  test_helper_module: passed

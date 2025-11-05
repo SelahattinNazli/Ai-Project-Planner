@@ -1,0 +1,86 @@
+task_breakdown:
+  description: >
+    Carefully analyze the given project requirements.
+    
+    Break down the project into logical and actionable tasks.
+    Ensure each task is clear, specific, and measurable.
+    
+    Identify dependencies between tasks.
+    Mark tasks that are critical for project success.
+    
+    Project type: {project_type}
+    Project objectives: {project_objectives}
+    Industry: {industry}
+    Project requirements: {project_requirements}
+  expected_output: >
+    A detailed task list. Each task should include:
+    - Unique task identifier
+    - Clear task description
+    - Task category (frontend, backend, design, testing, deployment)
+    - Dependencies on other tasks
+    - Priority level (high, medium, low)
+    - Complexity level (simple, medium, complex)
+
+time_resource_estimation:
+  description: >
+    Review the task list created by the Project Planning Agent.
+    
+    For each task:
+    - Estimate realistic completion time in hours
+    - Consider team experience and skill levels
+    - Identify required resources (developers, designers, tools)
+    - Account for potential risks and buffers
+    
+    Team members available: {team_members}
+    
+    Use historical data and industry standards for accurate estimates.
+    Include buffer time for unexpected issues (typically 15-20%).
+  expected_output: >
+    A comprehensive estimation report containing:
+    - Task name and ID
+    - Estimated hours for completion
+    - Required resources (specific roles and skills)
+    - Risk factors and mitigation strategies
+    - Confidence level in the estimate (high, medium, low)
+
+resource_allocation:
+  description: >
+    Based on task breakdown and time estimates:
+    
+    1. Assign tasks to appropriate team members considering:
+       - Individual skills and expertise
+       - Current workload and availability
+       - Task dependencies and priorities
+    
+    2. Create project milestones:
+       - Group related tasks into meaningful milestones
+       - Define clear deliverables for each milestone
+       - Establish realistic timeline for each phase
+    
+    3. Optimize team utilization:
+       - Balance workload across team members
+       - Avoid bottlenecks and overallocation
+       - Ensure knowledge sharing opportunities
+    
+    Team members: {team_members}
+    
+    Output must be in structured format for easy tracking and monitoring.
+  expected_output: >
+    A complete project plan in structured format containing:
+    
+    1. Task List with:
+       - Task name
+       - Estimated time in hours
+       - Required resources and team member assignments
+       - Dependencies
+    
+    2. Milestone Plan with:
+       - Milestone name
+       - Tasks included in milestone
+       - Target completion date
+       - Key deliverables
+    
+    3. Resource Allocation Summary:
+       - Team member workload distribution
+       - Resource utilization percentage
+       - Potential bottlenecks or concerns

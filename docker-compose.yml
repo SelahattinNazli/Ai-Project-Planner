@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # Streamlit App Service
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-planner-streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_BASE=http://host.docker.internal:11434/v1
+      - OPENAI_MODEL_NAME=qwen3:1.7b
+      - OPENAI_API_KEY=ollama
+    volumes:
+      - ./outputs:/app/outputs
+      - ./config:/app/config:ro
+    networks:
+      - ai-planner-network
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  ai-planner-network:
+    driver: bridge
